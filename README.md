@@ -51,3 +51,16 @@ This project demonstrates how to deploy a simple observability stack for Linux s
 - Monitor a second server
 - Add Blackbox Exporter
 - Automate full deployment end-to-end
+
+  ## Alerting
+
+- Configured Prometheus alert rules for CPU usage
+- Integrated Alertmanager for alert processing
+- Triggered alerts using stress-ng to simulate high CPU load
+- Verified alert flow from Prometheus → Alertmanager
+
+### Alert Example
+
+![Prometheus Alert](screenshots/prometheus-alert-firing.png)
+
+![Alertmanager](screenshots/alertmanager-alert.png)
