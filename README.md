@@ -1,5 +1,3 @@
-# sre-monitoring-stack
-Linux monitoring stack using Prometheus, Grafana, Node Exporter, and Ansible
 # SRE Monitoring Stack
 
 A practical Linux monitoring stack built with Prometheus, Grafana, Node Exporter, and Ansible.
