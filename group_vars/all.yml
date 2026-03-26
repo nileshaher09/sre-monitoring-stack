@@ -1,0 +1,5 @@
+prometheus_version: "3.4.2"
+node_exporter_version: "1.10.2"
+prometheus_port: 9090
+node_exporter_port: 9100
+grafana_port: 3000
