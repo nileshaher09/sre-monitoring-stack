@@ -10,11 +10,13 @@ This project demonstrates a complete end-to-end monitoring and alerting system u
 
 The setup monitors multiple nodes (Linux server + MacBook), generates alerts based on system metrics, and delivers notifications via email.
 
+This project validates real-world incident detection and response by simulating failures and verifying alert propagation across the monitoring pipeline.
+
 ---
 
 ## 🧱 Architecture
 
-MacBook (node_exporter)
+MacBook (Node Exporter)
   ↓ (via ngrok tunnel)
 Linux Server (Prometheus)
   ↓
@@ -34,7 +36,7 @@ Grafana Dashboards
 * Node Exporter (system metrics)
 * ngrok (secure tunnel for remote node)
 * stress (CPU load testing)
-* Ansible (automation & deployment)
+* Ansible (playbook-based automation)
 
 ---
 
@@ -79,9 +81,17 @@ This triggered alerts across:
 
 ## 📸 Screenshots
 
-### Prometheus Targets
+### Prometheus Targets (Multi-node)
 
-![Prometheus Targets](screenshots/prometheus-targets.png)
+![Prometheus Targets](screenshots/prometheus-targets-multi-node.png)
+
+### Grafana Dashboard - Linux Node
+
+![Grafana Linux](screenshots/multi-node-grafana-linux.png)
+
+### Grafana Dashboard - Mac Node
+
+![Grafana Mac](screenshots/multi-node-grafana-mac.png)
 
 ### Prometheus Alert (Firing)
 
@@ -95,9 +105,18 @@ This triggered alerts across:
 
 ![Email Alert](screenshots/email-alert.png)
 
-### Grafana Dashboard
+### ngrok Forwarding (Mac Node Exposure)
 
-![Grafana Dashboard](screenshots/grafana-dashboard.png)
+![ngrok Forwarding](screenshots/ngrok-forwarding.png)
+
+---
+
+## ⚠️ Challenges & Solutions
+
+* Exposed local MacBook metrics securely using ngrok tunnel
+* Handled dynamic ngrok endpoints by updating Prometheus scrape targets
+* Debugged Alertmanager SMTP configuration for reliable email delivery
+* Simulated real-world incidents using CPU stress testing
 
 ---
 
