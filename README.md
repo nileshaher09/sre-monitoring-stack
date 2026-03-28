@@ -1,3 +1,5 @@
+“Built as part of hands-on SRE practice to simulate real-world monitoring and incident response.”
+
 # 🚀 SRE Monitoring Stack (Prometheus + Alertmanager + Grafana)
 
 ## 📌 Overview
